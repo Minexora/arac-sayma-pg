@@ -43,9 +43,9 @@ class VehicleCounting:
 
     def define_line(self, frame, color=False):
         if(not color):
-            cv2.line(frame, (self.line_left * 2, self.line_top), (self.line_width, self.line_top), (255, 127, 0), 3)
+            cv2.line(frame, (self.line_left, self.line_top), (self.line_left + self.line_width, self.line_top), (255, 127, 0), 3)
         else:
-            cv2.line(frame, (self.line_left * 2, self.line_top), (self.line_width, self.line_top), (0, 127, 255), 3)
+            cv2.line(frame, (self.line_left, self.line_top), (self.line_left + self.line_width, self.line_top), (0, 127, 255), 3)
 
     def examination_contours(self, contour, h, frame1):
         for(i, c) in enumerate(contour):
